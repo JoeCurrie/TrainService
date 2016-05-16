@@ -8,7 +8,7 @@
 		$data['station'] = $response->body->stations[0]->name;
 		
 		$location = $data['station'];
-		$timestamp = 'test';
+		$timestamp = time();
 		
 		include("dbConnection.php");
 		mysqli_query($link, "INSERT INTO GeoHistory (location, timestamp) VALUES ('$location', '$timestamp')");
