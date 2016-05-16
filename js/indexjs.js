@@ -45,6 +45,7 @@ $(function() {
 			success: function(data) {
 				console.log(data);
 				if(!data.error) {
+					var sheet = document.styleSheets[1];
 					displayDiv = document.getElementById('resultDiv');
 					displayDiv.innerHTML = '';
 					for (i = 0; i < data.count; i++) {
@@ -52,6 +53,11 @@ $(function() {
 						newDiv.className = 'col-sm-6 searchResult';
 						newDiv.innerHTML = '<div class="panel panel-default"><div class="panel-body"><div class="panel-image hide-panel-body"><a href="display.php?tlc=' + data.results[i].tlc + '"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' + data.results[i].station + '&zoom=14&size=300x200&key=AIzaSyCV9MKvUbelTJkzcmzte3aM_rhZkGPns3U" class="panel-image-preview" /></a></div><div class="panel-footer text-center"><a href="display.php?tlc=' + data.results[i].tlc + '">' + data.results[i].station + '</a></div></div>';
 						displayDiv.appendChild(newDiv);
+					}
+					if(data.count > 3) {
+						sheet.addRule("#resultDiv", "padding-top: 550px;");
+					} else {
+						sheet.addRule("#resultDiv", "padding-top: 0px;");
 					}
 				} else {
 					alert("Database error: " + data.error);
@@ -61,10 +67,6 @@ $(function() {
 				alert("Search failed.");
 			}
 		});
-	};
-
-	function addStationResult(stationStr, tlcString) {
-
 	};
 
 
