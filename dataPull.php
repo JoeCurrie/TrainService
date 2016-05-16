@@ -77,8 +77,8 @@
 			print("</pre>");
 
 			$tmp = array_count_values($data);
-			foreach ($tmp as $value) {
-				echo "#" . $value . " : " . "</br>";
+			foreach (array_unique($data) as $value) {
+				echo "#" . $value . " : " . $tmp[$value] . "</br>";
 			}
 		}
 		
