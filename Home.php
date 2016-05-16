@@ -63,8 +63,9 @@
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
    echo $sql . "</br>";
    $result = mysqli_query($link, $sql);
+	print_r ($result);
    $row = mysqli_fetch_assoc($result);
-   print_r ($row);
+   printf ("%s (%s)\n",$row["email"],$row["apiKey"]);
 ?>
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
