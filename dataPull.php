@@ -72,6 +72,10 @@
 			print_r($data);
 			print("</pre>");
 
+			print("<pre>");
+			print_r($tmp);
+			print("</pre>");
+
 			$tmp = array_count_values($data);
 			foreach ($tmp as $value) {
 				echo "#" . $value . " : " . "</br>";
