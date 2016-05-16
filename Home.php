@@ -29,7 +29,7 @@
 	<?php
 	echo "before";
 	if ($_SESSION['id'] != '' or validatelogin($_POST[email],$_POST[password]) == true){
-
+	echo "if";
 ?>
 <body id="grad">
         <!-- Nav Bar -->
@@ -79,7 +79,8 @@
 </body>
 <?php
 	}
-	else{
+	else{ 
+	echo "else";
 ?>
     <body id="grad">
         <!-- Nav Bar -->
