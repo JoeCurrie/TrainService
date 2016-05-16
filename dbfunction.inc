@@ -11,7 +11,7 @@
 	   // Build an SQL statment that will return a record with a
            // matching id and password.
 	   $sql = "select * from user where email='$email' and password='$password';";
-	   $loginresult = mysql_query($sql,$link);
+	   $loginresult = mysqli_query($link, $sql);
            $userdetails = mysql_fetch_array($loginresult);
 	   // If the SQL query contains a record
 	   if ($userdetails[email]){
