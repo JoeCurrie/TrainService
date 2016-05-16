@@ -11,6 +11,7 @@ else
 
   $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
   
+  echo "<h1>Your TLC Code is: ".$TLC."</h1>";
   while ($row = mysqli_fetch_assoc($getTimes)) {
      echo $row['TLC'];
      echo $row['TrainUID'];
