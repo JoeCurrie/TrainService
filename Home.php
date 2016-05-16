@@ -29,7 +29,7 @@
 	<?php
 	echo "before";
 	if ($_SESSION['id'] != '' or validatelogin($_POST[email],$_POST[password]) == true){
-		echo "in";
+
 ?>
 <body id="grad">
         <!-- Nav Bar -->
@@ -61,13 +61,13 @@
 	<br/>
 <div class="container">
 <?php
-echo "data before";
+
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
 
    $result = mysql_query($sql,$link);
 
    $row = mysql_fetch_array($result);
-   echo "data after";
+
 ?>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <div class="row">
@@ -86,10 +86,8 @@ echo "data before";
 </div>
 </body>
 <?php
-echo " rest end"
 	}
 	else{
-		echo "else start";
 ?>
     <body id="grad">
         <!-- Nav Bar -->
@@ -146,6 +144,5 @@ echo " rest end"
 </body>
 </html>
 <?php
-echo "else end";
 	};
 ?>
