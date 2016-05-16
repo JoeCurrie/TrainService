@@ -98,7 +98,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="sgbutton"></label>
   <div class="col-md-4">
-    <button id="sgbutton" name="sgbutton" class="btn btn-inverse">Sign Up</button>
+    <button id="sgbutton" name="sgbutton" class="btn btn-inverse center-block">Sign Up</button>
   </div>
 </div>
 
@@ -136,7 +136,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="sgbutton"></label>
   <div class="col-md-4">
-    <button id="sgbutton" name="sgbutton" class="btn btn-inverse">Sign In</button>
+    <button id="sgbutton" name="sgbutton" class="btn btn-inverse center-block">Sign In</button>
   </div>
 </div>
 </div>
