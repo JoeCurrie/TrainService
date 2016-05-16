@@ -1,11 +1,19 @@
 <?php
-        session_start(); 
-		include('dbConnection.php');
-        include("dbfunction.inc");
-        print_r($_SESSION);
-        print_r($_POST);
+    session_start(); 
+	include('dbConnection.php');
+    include("dbfunction.inc");
+    print_r($_SESSION);
+    print_r($_POST);
 	// If the student has already been authenticated the $_SESSION['id'] variable
 	// will been assigned their student id.
+
+    if (!$_SESSION) {
+        if (!$_POST) {
+            validatelogin($_POST['email'],$_POST['password']);
+        } else {
+            header('Location:  https://trainservice.herokuapp.com/login.php');
+        }
+    }
 	?>
 	<html lang="en">
     <head>
@@ -27,7 +35,10 @@
 
     </head>
 	<?php
-	if (isset($_SESSION['id']) || validatelogin($_POST['email'],$_POST['password']) === true){
+
+    
+
+	if (isset($_SESSION['id'])){
 ?>
 <body id="grad">
         <!-- Nav Bar -->
