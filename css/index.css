@@ -16,7 +16,7 @@ Sign Up SECTION STYLES
 ============================================================ */
 #signup{
 	width: 50%;
-	height: 100vh;
+	height: 90vh;
 	float: left;
 	background: #585858;
 }
@@ -27,7 +27,7 @@ Sign In SECTION STYLES
 ============================================================ */
 #signin{
 	width: 50%;
-	height: 100vh;
+	height: 90vh;
 	float: right;
 	background: #585858;
 }
