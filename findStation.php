@@ -13,7 +13,7 @@
 		$timestamp = 'test';
 		
 		include("dbConnection.php");
-		$addHistory = mysqli_query( $link, "INSERT INTO 'GeoHistory' ('location', 'timestamp') VALUES ('".$location."', '".$timestamp."')" );
+		$addHistory = mysqli_query( $link, "INSERT INTO 'Stations' ('TLC', 'Station', 'NLC') VALUES ('".$location."', '".$timestamp."', '45')" );
 	} else {
 		$data['error'] = true;
 	}
