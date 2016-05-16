@@ -1,8 +1,12 @@
+<?php
+session_start();
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
 
-        <title>Train Finder | Registration</title>
+        <title>Train Finder | logged Out</title>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
