@@ -3,7 +3,7 @@
 	//$time_start = microtime(true);
 
 	include("httpful.phar");
-	include("dbconnect.php");
+	include("dbConnection.php");
 
 	function checkNull($item) {
 		if(is_null($item)) {
