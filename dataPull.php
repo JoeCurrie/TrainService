@@ -76,6 +76,7 @@
 			foreach (array_unique($data) as $value) {
 				echo "#" . $value . " : " . $tmp[$value] . "</br>";
 				$statSQL = "INSERT INTO `StationLineHistory` (`TLC`, `Operator`, `Count`, `Date`) VALUES ('" . $row['TLC'] . "', '" . $value . "', '" . $tmp[$value] . "', '" . getdate(timestamp) . "')";
+				echo $statSQL . "</br>";
 				//mysqli_query($link, $statSQL);
 			}
 		}
