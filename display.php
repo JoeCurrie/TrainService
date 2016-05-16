@@ -28,15 +28,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.php">
                         <img alt="Brand" class="img-rounded" src="img/icon3.png" width="25" height="25">
                     </a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a data-scroll href="#searchDiv">Search</a></li>
+                    <li><a data-scroll href="index.php">Search</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a data-scroll href="index.php">Home</a></li>
+                    <li><a data-scroll href="index.php">Home</a></li>
                     <li><a data-scroll href="#">Log In</a></li>
                 </ul>
             </div>
