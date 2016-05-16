@@ -13,7 +13,8 @@
            $userdetails = mysqli_fetch_assoc($loginresult);
 	   // If the SQL query contains a record
 	   if ($userdetails['email']){
-              $_SESSION['id'] = $loginresult['id'];
+              //$_SESSION['id'] = $loginresult['id'];
+	   		$_SESSION['id'] = "21";
    	      return true;
            }
            else {
