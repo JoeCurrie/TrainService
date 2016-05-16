@@ -11,7 +11,7 @@
 	}
 
 	//$sql = "SELECT * FROM Stations LIMIT 0, 5";
-	$sql = "SELECT * FROM Stations WHERE TLC = 'WAT'";
+	$sql = "SELECT * FROM Stations WHERE TLC = 'WAT' OR TCL = 'HYW'";
 
 	$result = mysqli_query($link, $sql);
 
