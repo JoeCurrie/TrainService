@@ -39,8 +39,7 @@ Sign In SECTION STYLES
 login panel STYLES
 ============================================================ */
 #grad {
-	padding-left: 2%;
-	padding-right: 2%;
+
     background: #262626; /* For browsers that do not support gradients */
 }
 #sgbutton{
