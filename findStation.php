@@ -3,6 +3,7 @@
 	//$time_start = microtime(true);
 
 	include("httpful.phar");
+	include("dbConnection.php")
 
 	$data = array();
 	$data['error'] = false;
@@ -13,6 +14,8 @@
 
 	if(count($response->body->stations) > 0) {
 		$data['station'] = $response->body->stations[0]->name;
+		$dt = new DateTime();
+		mysqli_query($link, "INSERT INTO `GeoHistory` (`location`, `date`) VALUES ('" . $data['station'] . "', '" . $dt->format('Y-m-d H:i:s') . "'");
 	} else {
 		$data['error'] = true;
 	}
