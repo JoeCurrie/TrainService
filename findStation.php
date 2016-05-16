@@ -9,7 +9,9 @@
 
 	if(count($response->body->stations) > 0) {
 		$data['station'] = $response->body->stations[0]->name;
-		mysqli_query($link, "INSERT INTO GeoHistory ('location', 'date') VALUES ('".$data['station']."', 'test')");
+		
+		$location = $data['station'];
+		mysqli_query($link, "INSERT INTO GeoHistory ('location', 'date') VALUES ('".$location."', 'test')");
 	} else {
 		$data['error'] = true;
 	}
