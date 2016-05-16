@@ -12,7 +12,14 @@ else
   $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
   
   while ($row = mysqli_fetch_assoc($getTimes)) {
-     echo $row['ID'];
+     echo $row['TLC'];
+     echo $row['TrainUID'];
+     echo $row['Platform'];
+     echo $row['Operator'];
+     echo $row['Aimed_Dep_Date'];
+     echo $row['Origin_Name'];
+     echo $row['Destination_Name'];
+     
   }
 }
 
