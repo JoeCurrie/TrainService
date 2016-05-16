@@ -67,8 +67,9 @@
    $sql = "select * from user where id='". $_SESSION['id'] . "';";
 
    $result = mysqli_query($link, $sql);
-
+	print_r ($result);
    $row = mysqli_fetch_array("$result");
+   print_r ($row);
 ?>
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
