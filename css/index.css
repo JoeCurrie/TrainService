@@ -19,7 +19,7 @@ Sign Up SECTION STYLES
 	border-style: solid;
 	border-width: 2px;
 	float: left;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgb(88,88,88,0.6);
 }
 
 
@@ -31,7 +31,17 @@ Sign In SECTION STYLES
 	border-style: solid;
 	border-width: 2px;
 	float: right;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgb(88,88,88,0.6);
+}
+/* =============================================================
+login panel STYLES
+============================================================ */
+#grad {
+    background: #585858; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#585858, #777777); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#585858, #777777); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient (#585858, #777777); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#585858, #777777); /* Standard syntax */
 }
 
 body {
