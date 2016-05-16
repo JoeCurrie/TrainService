@@ -1,6 +1,5 @@
 <?php
 	include("httpful.phar");
-	include("dbConnection.php");
 
 	$data = array();
 	$data['error'] = false;
@@ -11,7 +10,10 @@
 		$data['station'] = $response->body->stations[0]->name;
 		
 		$location = $data['station'];
-		$addHistory = mysqli_query($link, "INSERT INTO GeoHistory ('location', 'date') VALUES ('".$location."', 'test')");
+		$timestamp = 'test';
+		
+		include("dbConnection.php");
+		$addHistory = mysqli_query($link, "INSERT INTO 'GeoHistory' ('location', 'timestamp') VALUES ('".$location."', '".$timestamp."')");
 	} else {
 		$data['error'] = true;
 	}
