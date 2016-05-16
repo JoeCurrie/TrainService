@@ -25,7 +25,7 @@
         
         $getStationName = mysqli_query($link, "SELECT * FROM Stations WHERE TLC='".$TLC."'");
         $row = mysqli_fetch_assoc($getStationName);
-        echo "<h1>TLC: ".$TLC." | Station: ".$row['Station']."</h1>";
+        echo "<h1><b>TLC: ".$TLC." | Station: ".$row['Station']."</b></h1>";
       
         $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
         while ($row = mysqli_fetch_assoc($getTimes)) {
