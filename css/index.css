@@ -19,7 +19,6 @@ Sign Up SECTION STYLES
 	border-style: solid;
 	border-width: 2px;
 	float: left;
-	background-color: rgb(255,255,255, 1);
 }
 
 
@@ -31,7 +30,6 @@ Sign In SECTION STYLES
 	border-style: solid;
 	border-width: 2px;
 	float: right;
-	background-color: rgb(255,255,255, 1);
 }
 /* =============================================================
 login panel STYLES
