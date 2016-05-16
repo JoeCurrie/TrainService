@@ -76,8 +76,8 @@
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						<div id="title"><h2>User Details<h2></div>
 						<hr class="style-two">
-						<input name="Email" type="text" class="form-control" placeholder="Email" value="<?php echo $row['email'] ?>" readonly>
-						<input name="APIkey" type="text" class="form-control" placeholder="APIkey" value="<?php echo $row['apiKey'] ?>" readonly>
+						<input name="Email" type="text" class="form-control" placeholder="Email" value="<?php echo $row['email']; ?>" readonly>
+						<input name="APIkey" type="text" class="form-control" placeholder="APIkey" value="<?php echo $row['apiKey']; ?>" readonly>
 						</div>
 </div>
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
