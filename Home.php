@@ -29,13 +29,7 @@
 	<?php
 	echo "before";
 	if (isset($_SESSION['id']) || validatelogin($_POST['email'],$_POST['password']) === true){
-	
 	echo "if";
-   $sql = "select * from user where id='". $_SESSION['id'] . "';";
-
-   $result = mysqli_query($link, $sql);
-
-   $row = mysqli_fetch_array("$result");
 ?>
 <body id="grad">
         <!-- Nav Bar -->
@@ -68,6 +62,14 @@
 <div class="container">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<?php
+
+   $sql = "select * from user where id='". $_SESSION['id'] . "';";
+
+   $result = mysqli_query($link, $sql);
+
+   $row = mysqli_fetch_array("$result");
+?>
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
