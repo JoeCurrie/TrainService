@@ -29,6 +29,12 @@
 	<?php
 	echo "before";
 	if (isset($_SESSION['id']) || validatelogin($_POST['email'],$_POST['password']) === true){
+		
+   $sql = "select * from user where id='". $_SESSION['id'] . "';";
+
+   $result = mysqli_query($link, $sql);
+
+   $row = mysqli_fetch_array("$result");
 	echo "if";
 ?>
 <body id="grad">
