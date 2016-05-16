@@ -2,7 +2,7 @@
 	// Start timer...
 	//$time_start = microtime(true);
 
-	include("dbconnect.php");
+	include("dbConnection.php");
 
 	$data = array();
 
