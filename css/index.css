@@ -16,6 +16,7 @@ Sign Up SECTION STYLES
 ============================================================ */
 #signup{
 	width: 50%;
+	height: 100vh;
 	float: left;
 	background: #585858;
 }
@@ -26,6 +27,7 @@ Sign In SECTION STYLES
 ============================================================ */
 #signin{
 	width: 50%;
+	height: 100vh;
 	float: right;
 	background: #585858;
 }
@@ -34,6 +36,9 @@ login panel STYLES
 ============================================================ */
 #grad {
     background: #585858; /* For browsers that do not support gradients */
+}
+#sgbutton{
+	color: #585858;
 }
 
 body {
