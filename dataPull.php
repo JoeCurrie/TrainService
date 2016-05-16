@@ -42,7 +42,7 @@
 			
 
 			foreach($response->body->departures as $departure) {
-				foreach($departure->all as $train) {
+				foreach($departure as $train) {
 
 					print("<pre>");
 					print_r($train);
