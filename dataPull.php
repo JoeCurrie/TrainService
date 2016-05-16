@@ -21,6 +21,8 @@
 		// Delete rows from TrainTimes table of current station
 		$sqlDel = "DELETE FROM `TrainTimes` WHERE `TLC` = '" . $row['TLC'] . "'";
 		
+		echo "delete SQL: " . $sqlDel . "</br>";
+
 		mysqli_query($link, $sqlDel) or die("Delete query failed");
 		
 		// Add times to the TrainTime table
@@ -32,17 +34,17 @@
 		echo "Count of items to add: " . count($response->body->departures->all) . "</br>";
 
 		echo "Complete JSON object response</br>";
-		print("<pre>");
-		print_r($response);
-		print("</pre>");
+		//print("<pre>");
+		//print_r($response);
+		//print("</pre>");
 
 		foreach($response->body->departures as $departure) {
-			echo "For every Departure</br>";
+			//echo "For every Departure</br>";
 			foreach($departure as $train) {
-				echo "For every train</br>";
-				print("<pre>");
-				print_r($train);
-				print("</pre>");
+				//echo "For every train</br>";
+				//print("<pre>");
+				//print_r($train);
+				//print("</pre>");
 
 				$sqlInsert = "INSERT INTO `TrainTimes`(`TLC`, `Service`, `TrainUID`, `Platform`, `Operator`, `Aimed_Dep_Date`, `Aimed_Arr_Date`, `Aimed_Pass_Time`, `Origin_Name`, `Source`, `Destination_Name`) VALUES (";
 				$sqlInsert .= "'" . $row['TLC'] . "', ";
@@ -57,7 +59,7 @@
 				$sqlInsert .= "'" . $train->source . "', ";
 				$sqlInsert .= "'" . $train->destination_name . "')";
 
-				echo "SQL: " . $sqlInsert . "</br>";
+				//echo "SQL: " . $sqlInsert . "</br>";
 				mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 			}
 		}
