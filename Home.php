@@ -28,7 +28,7 @@
     </head>
 	<?php
 	echo "before";
-	if ($_SESSION['id'] != '' or validatelogin($_POST[email],$_POST[password]) == true){
+	if (isset($_SESSION['id']) || validatelogin($_POST['email'],$_POST['password']) === true){
 	echo "if";
 ?>
 <body id="grad">
