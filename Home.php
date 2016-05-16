@@ -64,11 +64,11 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <?php
 
-   $sql = "select * from user where id='". $_SESSION['id'] . "';";
+   $sql = "select * from user where id='". $_SESSION['id'] . "'";
 
    $result = mysqli_query($link, $sql);
 	print_r ($result);
-   $row = mysqli_fetch_array("$result");
+   $row = mysqli_fetch_array($result);
    print_r ($row);
 ?>
 <div class="row">
