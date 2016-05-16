@@ -66,3 +66,24 @@ body {
 	font-size: 6em;
 	margin-bottom: -10px;
 }
+
+#resultDiv {
+	width: 70%;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.panel-image img.panel-image-preview {
+    width: 100%;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.panel-heading ~ .panel-image img.panel-image-preview {
+	border-radius: 0px;
+}
+
+.panel-body {
+	padding: 0px;
+}
