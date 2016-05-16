@@ -17,7 +17,7 @@
         $result = mysqli_query($link, $query) or die("Issue with details");
         if($result){
 			$extra = 'login.php';
-			redirect($extra);
+			//redirect($extra);
         }
 		else{
 			?>
