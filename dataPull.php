@@ -22,8 +22,7 @@
 		echo "Station Name: " . $row['Station'] . "</br>"; 
 		
 		// Delete rows from TrainTimes table of current station
-		$sqlDel = "DELETE FROM `TrainTimes` WHERE `TLC` = " . $row['TLC'];
-		
+		$sqlDel = "DELETE FROM TrainTimes WHERE TLC='".$row['TLC']."'";
 		mysqli_query($link, $sqlDel) or die("Delete query failed");
 		
 		// Add times to the TrainTime table
