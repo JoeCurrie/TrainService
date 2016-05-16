@@ -83,10 +83,10 @@
                     One of three columns
                 </div>
                 <div class="col-sm-4">
-                    One of three columns
+                    Two of three columns
                 </div>
                 <div class="col-sm-4">
-                    One of three columns
+                    Three of three columns
                 </div>
             </div>
         </div>
