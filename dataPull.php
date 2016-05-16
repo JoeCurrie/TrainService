@@ -40,8 +40,10 @@
 		//print("</pre>");
 
 		foreach($response->body->departures as $departure) {
+			$data = array();
 			//echo "For every Departure</br>";
 			foreach($departure as $train) {
+
 				//echo "For every train</br>";
 				//print("<pre>");
 				//print_r($train);
@@ -62,7 +64,13 @@
 
 				echo "SQL: " . $sqlInsert . "</br>";
 				mysqli_query($link, $sqlInsert) or die("INSERT query failed");
+
+				$data[] = $row['TLC'];
 			}
+
+			print("<pre>");
+			print_r($data);
+			print("</pre>");
 		}
 		
 		//print("<pre>");
