@@ -42,28 +42,32 @@
 			
 
 			foreach($response->body->departures as $departure) {
-				foreach($departure[0]->all as $train) {
+				foreach($departure as $train) {
+					foreach($train as $indivTrain) {
 
-					print("<pre>");
-					print_r($train);
-					print("</pre>");
+						print("<pre>");
+						print_r($train);
+						print("</pre>");
 
-					$sqlInsert = "INSERT INTO `TrainTimes`(`TLC`, `Service`, `TrainUID`, `Platform`, `Operator`, `Aimed_Dep_Date`, `Aimed_Arr_Date`, `Aimed_Pass_Time`, `Origin_Name`, `Source`, `Destination_Name`) VALUES (";
-					$sqlInsert .= "'" . $row['TLC'] . "', ";
-					$sqlInsert .= $train->service . ", ";
-					$sqlInsert .= "'" . $train->train_uid . "', ";
-					$sqlInsert .= checkNull($train->platform) . ", ";
-					$sqlInsert .= "'" . $train->operator . "', ";
-					$sqlInsert .= "'" . $train->aimed_departure_time . "', ";
-					$sqlInsert .= "'" . $train->aimed_arrival_time . "', ";
-					$sqlInsert .= "'" . $train->aimed_pass_time . "', ";
-					$sqlInsert .= "'" . $train->origin_name . "', ";
-					$sqlInsert .= "'" . $train->source . "', ";
-					$sqlInsert .= "'" . $train->destination_name . "')";
+						$sqlInsert = "INSERT INTO `TrainTimes`(`TLC`, `Service`, `TrainUID`, `Platform`, `Operator`, `Aimed_Dep_Date`, `Aimed_Arr_Date`, `Aimed_Pass_Time`, `Origin_Name`, `Source`, `Destination_Name`) VALUES (";
+						$sqlInsert .= "'" . $row['TLC'] . "', ";
+						$sqlInsert .= $train->service . ", ";
+						$sqlInsert .= "'" . $train->train_uid . "', ";
+						$sqlInsert .= checkNull($train->platform) . ", ";
+						$sqlInsert .= "'" . $train->operator . "', ";
+						$sqlInsert .= "'" . $train->aimed_departure_time . "', ";
+						$sqlInsert .= "'" . $train->aimed_arrival_time . "', ";
+						$sqlInsert .= "'" . $train->aimed_pass_time . "', ";
+						$sqlInsert .= "'" . $train->origin_name . "', ";
+						$sqlInsert .= "'" . $train->source . "', ";
+						$sqlInsert .= "'" . $train->destination_name . "')";
 
-					echo $sqlInsert . "</br>";
+						echo $sqlInsert . "</br>";
 
-					mysqli_query($link, $sqlInsert) or die("INSERT query failed");
+						mysqli_query($link, $sqlInsert) or die("INSERT query failed");
+						
+					}
+
 				}
 			}
 			
