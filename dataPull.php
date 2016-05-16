@@ -63,7 +63,7 @@
 
 					echo $sqlInsert . "</br>";
 
-					mysqli_query($link, $sqlInsert) or die("INSERT query failed");
+					//mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 
 				}
 			}
