@@ -14,7 +14,7 @@
 	   // If the SQL query contains a record
 	   if ($userdetails['email']){
               //$_SESSION['id'] = $loginresult['id'];
-	   		$_SESSION['id'] = "21";
+	   		$_SESSION['id'] = $uniqueID;
    	      return true;
            }
            else {
