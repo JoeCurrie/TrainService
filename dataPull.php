@@ -24,7 +24,7 @@
 		// Delete rows from TrainTimes table of current station
 		$sqlDel = "DELETE FROM `TrainTimes` WHERE `TLC` = " . $row['TLC'];
 		
-		mysqli_query($link, $sql) or die("Delete query failed");
+		mysqli_query($link, $sqlDel) or die("Delete query failed");
 		
 		// Add times to the TrainTime table
 		$url = "http://transportapi.com/v3/uk/train/station/" . $row['TLC'] . "/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&train_status=passenger";
