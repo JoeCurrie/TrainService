@@ -51,7 +51,7 @@
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-												<div id="title"><h2>Your login details are invalid<h2></div>
+												<div id="title"><h2>Please Login!<h2></div>
 						<hr class="style-two">
 						<form name="frmLogin" action="Home.php" method="post">
 								<input id="email" type="text" name="email" class="form-control" placeholder="Email">	
