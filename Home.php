@@ -3,6 +3,7 @@
         session_start(); 
 		require('dbConnection.php');
         include("dbfunctions.inc");
+		echo "rest";
 	// If the student has already been authenticated the $_SESSION['id'] variable
 	// will been assigned their student id.
 	?>
