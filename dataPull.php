@@ -24,40 +24,41 @@
 		mysqli_query($link, $sql) or die("Delete query failed");
 		
 		// Add times to the TrainTime table
-		$url = "http://transportapi.com/v3/uk/train/station/" . $row['TLC'] . "/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&train_status=passenger";
+		//$url = "http://transportapi.com/v3/uk/train/station/" . $row['TLC'] . "/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&train_status=passenger";
+		$url = "http://transportapi.com/v3/uk/train/station/AMR/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&train_status=passenger";
 
 		$response = \Httpful\Request::get($url)->send();
 
 		echo "Count of items to add: " . count($response->body->departures->all) . "</br>";
 
+		echo "Complete JSON object response</br>";
 		print("<pre>");
 		print_r($response);
 		print("</pre>");
 
-		for($i = 0 ; $i < count($response->body->departures->all); $i++) {
-			foreach($response->body->departures as $departure) {
-				foreach($departure as $train) {
+		foreach($response->body->departures as $departure) {
+			echo "For every Departure</br>";
+			foreach($departure as $train) {
+				echo "For every train</br>";
+				print("<pre>");
+				print_r($train);
+				print("</pre>");
 
-					print("<pre>");
-					print_r($train);
-					print("</pre>");
+				$sqlInsert = "INSERT INTO `TrainTimes`(`TLC`, `Service`, `TrainUID`, `Platform`, `Operator`, `Aimed_Dep_Date`, `Aimed_Arr_Date`, `Aimed_Pass_Time`, `Origin_Name`, `Source`, `Destination_Name`) VALUES (";
+				$sqlInsert .= "'" . $row['TLC'] . "', ";
+				$sqlInsert .= $train->service . ", ";
+				$sqlInsert .= "'" . $train->train_uid . "', ";
+				$sqlInsert .= checkNull($train->platform) . ", ";
+				$sqlInsert .= "'" . $train->operator . "', ";
+				$sqlInsert .= "'" . $train->aimed_departure_time . "', ";
+				$sqlInsert .= "'" . $train->aimed_arrival_time . "', ";
+				$sqlInsert .= "'" . $train->aimed_pass_time . "', ";
+				$sqlInsert .= "'" . $train->origin_name . "', ";
+				$sqlInsert .= "'" . $train->source . "', ";
+				$sqlInsert .= "'" . $train->destination_name . "')";
 
-					$sqlInsert = "INSERT INTO `TrainTimes`(`TLC`, `Service`, `TrainUID`, `Platform`, `Operator`, `Aimed_Dep_Date`, `Aimed_Arr_Date`, `Aimed_Pass_Time`, `Origin_Name`, `Source`, `Destination_Name`) VALUES (";
-					$sqlInsert .= "'" . $row['TLC'] . "', ";
-					$sqlInsert .= $train->service . ", ";
-					$sqlInsert .= "'" . $train->train_uid . "', ";
-					$sqlInsert .= checkNull($train->platform) . ", ";
-					$sqlInsert .= "'" . $train->operator . "', ";
-					$sqlInsert .= "'" . $train->aimed_departure_time . "', ";
-					$sqlInsert .= "'" . $train->aimed_arrival_time . "', ";
-					$sqlInsert .= "'" . $train->aimed_pass_time . "', ";
-					$sqlInsert .= "'" . $train->origin_name . "', ";
-					$sqlInsert .= "'" . $train->source . "', ";
-					$sqlInsert .= "'" . $train->destination_name . "')";
-
-					echo "SQL: " . $sqlInsert . "</br>";
-					mysqli_query($link, $sqlInsert) or die("INSERT query failed");
-				}
+				echo "SQL: " . $sqlInsert . "</br>";
+				mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 			}
 		}
 		
