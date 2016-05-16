@@ -1,7 +1,7 @@
 <?php
 		echo "start";
         session_start(); 
-		require('dbConnection.php');
+		include('dbConnection.php');
         include("dbfunctions.inc");
 		echo "rest";
 	// If the student has already been authenticated the $_SESSION['id'] variable
