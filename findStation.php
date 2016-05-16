@@ -11,7 +11,7 @@
 		$data['station'] = $response->body->stations[0]->name;
 		
 		$location = $data['station'];
-		mysqli_query($link, "INSERT INTO GeoHistory ('location', 'date') VALUES ('".$location."', 'test')");
+		mysqli_query($link, "INSERT INTO 'GeoHistory' ('id', 'location', 'date') VALUES ('3', '".$location."', 'test')");
 	} else {
 		$data['error'] = true;
 	}
