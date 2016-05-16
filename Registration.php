@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
 
     </head>
-    <body id="grad">
+    <body>
         <!-- Nav Bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -46,7 +46,7 @@
             </div>
         </nav>
 	<br/>
-        <div class="container-fluid">
+        <div  id="grad" class="container-fluid">
             <!-- Search Bar -->
             <div class="row">
 <!-- Sign Up Panel -->
