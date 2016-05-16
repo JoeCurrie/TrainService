@@ -68,7 +68,7 @@
 
    $result = mysqli_query($link, $sql);
 	print_r ($result);
-   $row = mysqli_fetch_array($result);
+   $row = mysqli_fetch_assoc($result);
    print_r ($row);
 ?>
 <div class="row">
