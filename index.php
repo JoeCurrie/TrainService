@@ -54,7 +54,7 @@
                         <h1>Search</h1>
                         <small>Look for a station by it's name of associating TLC code</small>
                     </div>
-                    <form id="frmSearch" class="form-inline">
+                    <form id="frmSearch" autocomplete="off" class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-lg">
                                 <input type="text" id="searchBar" name="searchString" class="form-control" placeholder="Search by Station or TLC...">
