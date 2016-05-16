@@ -15,6 +15,7 @@
 	   if ($userdetails['email']){
               //$_SESSION['id'] = $loginresult['id'];
 	   		$_SESSION['id'] = $uniqueID;
+			session_start();
    	      return true;
            }
            else {
