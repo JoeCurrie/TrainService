@@ -22,7 +22,7 @@
 		// Delete rows from TrainTimes table of current station
 		$sqlDel = "DELETE FROM `TrainTimes` WHERE `TLC` = '" . $row['TLC'] . "'";
 		
-		echo "delete SQL: " . $sqlDel . "</br>";
+		//echo "delete SQL: " . $sqlDel . "</br>";
 
 		mysqli_query($link, $sqlDel) or die("Delete query failed");
 		
@@ -32,9 +32,9 @@
 
 		$response = \Httpful\Request::get($url)->send();
 
-		echo "Count of items to add: " . count($response->body->departures->all) . "</br>";
+		//echo "Count of items to add: " . count($response->body->departures->all) . "</br>";
 
-		echo "Complete JSON object response</br>";
+		//echo "Complete JSON object response</br>";
 		//print("<pre>");
 		//print_r($response);
 		//print("</pre>");
@@ -62,23 +62,21 @@
 				$sqlInsert .= "'" . $train->source . "', ";
 				$sqlInsert .= "'" . $train->destination_name . "')";
 
-				echo "SQL: " . $sqlInsert . "</br>";
+				//echo "SQL: " . $sqlInsert . "</br>";
 				mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 
 				$data[] = $train->operator;
 			}
 
-			print("<pre>");
-			print_r($data);
-			print("</pre>");
-
-			print("<pre>");
-			print_r($tmp);
-			print("</pre>");
+			//print("<pre>");
+			//print_r($data);
+			//print("</pre>");
 
 			$tmp = array_count_values($data);
 			foreach (array_unique($data) as $value) {
 				echo "#" . $value . " : " . $tmp[$value] . "</br>";
+				$statSQL = "INSERT INTO `StationLineHistory` (`TLC`, `Operator`, `Count`, `Date`) VALUES ('" . $row['TLC'] . "', '" . $value . "', '" . $tmp[$value] . "', '" . getdate(timestamp) . "')";
+				//mysqli_query($link, $statSQL);
 			}
 		}
 		
