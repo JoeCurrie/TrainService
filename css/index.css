@@ -1,0 +1,68 @@
+.inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 80%;
+	width: 80%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+body {
+	padding-top: 50px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+#searchDiv {
+	background-color: #262626;
+	background-image: url('../img/bk_magnifyingglass.png');
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+#aboutDiv {
+	background: #595959;
+}
+
+#APIDiv {
+	background: #262626;
+}
+
+#frmSearch {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.form-group, .input-group {
+	width: 100%;
+}
+
+.tooltip.top .tooltip-inner {
+	background-color: #3399ff;
+}
+
+.tooltip.top .tooltip-arrow {
+	display: none;
+}
+
+#searchDesc {
+	width: 70%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#searchDesc h1 {
+	font-size: 6em;
+	margin-bottom: -10px;
+}
