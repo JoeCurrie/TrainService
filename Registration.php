@@ -108,7 +108,7 @@
 <!-- Sign Up End -->
 <!-- Sign In Panel -->
 <div id="signin" class="panel">
- <form action = "Home.php" method = "POST" class="form-horizontal">
+ <form action = "Registration.php" method = "POST" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
