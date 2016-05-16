@@ -45,7 +45,7 @@
                 </ul>
             </div>
         </nav>
-
+	<br/>
         <div class="container-fluid">
             <!-- Search Bar -->
             <div class="row">
