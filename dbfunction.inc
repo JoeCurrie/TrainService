@@ -6,15 +6,13 @@
 
 	// Validate a student id and password 
 	function validatelogin($email,$password){
-	   // Connect to the database
-           include("dbconnection.inc");
 	   // Build an SQL statment that will return a record with a
            // matching id and password.
-	   $sql = "select * from user where email='$email' and password='$password';";
+	   $sql = "select * from user where email='$email' and password='$password'";
 	   $loginresult = mysqli_query($link, $sql);
-           $userdetails = mysql_fetch_array($loginresult);
+           $userdetails = mysqli_fetch_array($loginresult);
 	   // If the SQL query contains a record
-	   if ($userdetails[email]){
+	   if ($userdetails['email']){
               $_SESSION['id'] = $id;
    	      return true;
            }

@@ -2,7 +2,7 @@
 		echo "start";
         session_start(); 
 		include('dbConnection.php');
-        include("dbfunctions.php");
+        include("dbfunction.inc");
 		echo "rest";
 	// If the student has already been authenticated the $_SESSION['id'] variable
 	// will been assigned their student id.
