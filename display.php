@@ -47,7 +47,16 @@
            echo "<tr>";
            echo "<td><b>".$row['Destination_Name']."</b></td>";
            echo "<td>".$row['Aimed_Dep_Date']."</td>";
-           echo "<td>".$row['Platform']."</td>";
+           
+           if($row['Platform'] != "0")
+           {
+               echo "<td>".$row['Platform']."</td>";
+           }
+           else
+           {
+               echo "<td>1</td>";
+           }
+           
            echo "<td>".$row['Operator']."</td>";
            echo "</tr>";
         }
