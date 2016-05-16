@@ -11,4 +11,5 @@ $link mysqli_connect($hostname = $dbparts['host'], $username = $dbparts['user'],
 if ($link->connect_error) {
     die("Connection failed: " . $link->connect_error);
 }
+
 ?>
