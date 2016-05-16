@@ -65,12 +65,17 @@
 				echo "SQL: " . $sqlInsert . "</br>";
 				mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 
-				$data[] = $row['TLC'];
+				$data[] = $train->operator;
 			}
 
 			print("<pre>");
 			print_r($data);
 			print("</pre>");
+
+			$tmp = array_count_values($data);
+			foreach ($tmp as $value) {
+				echo "#" . $value[1] . " : " . $value[0] . "</br>";
+			}
 		}
 		
 		//print("<pre>");
