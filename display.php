@@ -22,7 +22,10 @@
       {
         include("dbConnection.php");
         $TLC = $_GET['tlc'];
-        echo "<h1>Your TLC Code is: ".$TLC."</h1>";
+        
+        $getStationName = mysqli_query($link, "SELECT * FROM Stations WHERE TLC='".$TLC."'");
+        $row = mysqli_fetch_assoc($getStationName);
+        echo "<h1>Station: ".$row['Station']."</h1>";
       
         $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
         while ($row = mysqli_fetch_assoc($getTimes)) {
