@@ -13,7 +13,7 @@
 		}
 	}
 
-	$sql = "SELECT * FROM Stations LIMIT 0, 5";
+	$sql = "SELECT * FROM Stations LIMIT 0, 10";
 
 	$result = mysqli_query($link, $sql);
 
