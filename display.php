@@ -9,7 +9,7 @@ else
   include("dbConnection.php");
   $TLC = $_GET['tlc'];
 
-  $getTimes = mysqli_query($link, "SELECT * FROM 'Stations' WHERE 'TLC'='".$TLC."'");
+  $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes");
   
   while ($row = mysqli_fetch_assoc($getTimes)) {
      echo "yes";
