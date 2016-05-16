@@ -3,6 +3,7 @@
 		include('dbConnection.php');
         include("dbfunction.inc");
         print_r($_SESSION);
+        print_r($_POST);
 	// If the student has already been authenticated the $_SESSION['id'] variable
 	// will been assigned their student id.
 	?>
