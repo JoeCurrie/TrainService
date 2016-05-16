@@ -1,5 +1,5 @@
 <?php
-$connection = mysql_connect('localhost', 'b0cdvdlfknn2f7i1', 't7e2dai8jpa59ak6');
+$connection = mysql_connect('uf63wl4z2daq9dbb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com', 'b0cdvdlfknn2f7i1', 't7e2dai8jpa59ak6');
 if (!$connection){
     die("Database Connection Failed" . mysql_error());
 }

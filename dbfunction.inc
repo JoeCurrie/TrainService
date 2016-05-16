@@ -7,7 +7,7 @@
 	// Validate a student id and password 
 	function validatelogin($email,$password){
 	   // Connect to the database
-           include("dbConnection.php");
+           include("dbconnection.inc");
 	   // Build an SQL statment that will return a record with a
            // matching id and password.
 	   $sql = "select * from user where email='$email' and password='$password';";
