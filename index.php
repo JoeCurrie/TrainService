@@ -41,7 +41,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a data-scroll href="index.php">Home</a></li>
-                    <li><a data-scroll href="#">Log In</a></li>
+                    <li><a data-scroll href="Registration.php">Log In</a></li>
                 </ul>
             </div>
         </nav>
