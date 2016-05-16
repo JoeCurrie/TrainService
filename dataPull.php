@@ -74,7 +74,7 @@
 
 			$tmp = array_count_values($data);
 			foreach ($tmp as $value) {
-				echo "#" . $value . " : " . $value[$value] . "</br>";
+				echo "#" . $value . " : " . "</br>";
 			}
 		}
 		
