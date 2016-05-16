@@ -34,7 +34,6 @@
         <table class="table table-striped">
         <thead>
           <tr>
-            <th>Origin Station</th>
             <th>Destination Station</th>
             <th>Train Departure Time</th>
             <th>Platform</th>
@@ -46,11 +45,10 @@
         $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
         while ($row = mysqli_fetch_assoc($getTimes)) {
            echo "<tr>";
+           echo "<td><b>".$row['Destination_Name']."</b></td>";
+           echo "<td>".$row['Aimed_Dep_Date']."</td>";
            echo "<td>".$row['Platform']."</td>";
            echo "<td>".$row['Operator']."</td>";
-           echo "<td>".$row['Aimed_Dep_Date']."</td>";
-           echo "<td>".$row['Origin_Name']."</td>";
-           echo "<td>".$row['Destination_Name']."</td>";
            echo "</tr>";
         }
       }
