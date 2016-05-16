@@ -29,7 +29,7 @@
 	<?php
 	echo "before";
 	if ($_SESSION['id'] != '' or validatelogin($_POST[email],$_POST[password]) == true){
-
+		echo "in";
 ?>
 <body id="grad">
         <!-- Nav Bar -->
