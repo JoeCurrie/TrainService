@@ -3,7 +3,7 @@
 	//$time_start = microtime(true);
 
 	include("httpful.phar");
-	include("dbConnection.php");
+	include("dbconnect.php");
 
 	function checkNull($item) {
 		if(is_null($item)) {
@@ -13,7 +13,7 @@
 		}
 	}
 
-	$sql = "SELECT * FROM Stations LIMIT 0, 10";
+	$sql = "SELECT * FROM Stations LIMIT 0, 5";
 
 	$result = mysqli_query($link, $sql);
 
@@ -22,8 +22,9 @@
 		echo "Station Name: " . $row['Station'] . "</br>"; 
 		
 		// Delete rows from TrainTimes table of current station
-		$sqlDel = "DELETE FROM TrainTimes WHERE TLC='".$row['TLC']."'";
-		mysqli_query($link, $sqlDel) or die("Delete query failed");
+		$sqlDel = "DELETE FROM `TrainTimes` WHERE `TLC` = " . $row['TLC'];
+		
+		mysqli_query($link, $sql) or die("Delete query failed");
 		
 		// Add times to the TrainTime table
 		$url = "http://transportapi.com/v3/uk/train/station/" . $row['TLC'] . "/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&train_status=passenger";
@@ -41,7 +42,7 @@
 			
 
 			foreach($response->body->departures as $departure) {
-				foreach($departure as $train) {
+				foreach($departure[0]->all as $train) {
 
 					print("<pre>");
 					print_r($train);
@@ -59,14 +60,13 @@
 					$sqlInsert .= "'" . $train->origin_name . "', ";
 					$sqlInsert .= "'" . $train->source . "', ";
 					$sqlInsert .= "'" . $train->destination_name . "')";
+
+					echo $sqlInsert . "</br>";
+
+					mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 				}
 			}
-
 			
-
-			echo $sqlInsert . "</br>";
-
-			mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 		}
 		
 
