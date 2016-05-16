@@ -1,9 +1,7 @@
 <?php
-		echo "start";
         session_start(); 
 		include('dbConnection.php');
         include("dbfunction.inc");
-		echo "rest";
 	// If the student has already been authenticated the $_SESSION['id'] variable
 	// will been assigned their student id.
 	?>
@@ -27,9 +25,7 @@
 
     </head>
 	<?php
-	echo "before";
 	if (isset($_SESSION['id']) || validatelogin($_POST['email'],$_POST['password']) === true){
-	echo "if";
 ?>
 <body id="grad">
         <!-- Nav Bar -->
@@ -67,7 +63,6 @@
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
 
    $result = mysqli_query($link, $sql);
-	print_r ($result);
    $row = mysqli_fetch_assoc($result);
    print_r ($row);
 ?>
@@ -89,7 +84,6 @@
 <?php
 	}
 	else{ 
-	echo "else";
 ?>
     <body id="grad">
         <!-- Nav Bar -->
@@ -124,7 +118,7 @@
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-												<div id="title"><h2>Your login details are invalid<h2></div>
+												<div id="title"><h2>Your login details are invalid. Please Try Again!<h2></div>
 						<hr class="style-two">
 						<form name="frmLogin" action="Home.php" method="post">
 								<input id="email" type="text" name="email" class="form-control" placeholder="Email">	
