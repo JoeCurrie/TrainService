@@ -46,9 +46,9 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
+        <div id="grad" class="container-fluid">
             <!-- Search Bar -->
-            <div id="grad" class="row">
+            <div class="row">
 <!-- Sign Up Panel -->
 <div id="signup" class="panel">
 <form action = "register.php" method = "POST" class="form-horizontal">
