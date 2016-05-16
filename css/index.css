@@ -22,7 +22,7 @@ Sign Up SECTION STYLES
 	width: 50%;
 	height: 90vh;
 	float: left;
-	background: #585858;
+	background: #262626;
 }
 
 
@@ -33,16 +33,18 @@ Sign In SECTION STYLES
 	width: 50%;
 	height: 90vh;
 	float: right;
-	background: #585858;
+	background: #262626;
 }
 /* =============================================================
 login panel STYLES
 ============================================================ */
 #grad {
-    background: #585858; /* For browsers that do not support gradients */
+	padding-left: 2%;
+	padding-right: 2%;
+    background: #262626; /* For browsers that do not support gradients */
 }
 #sgbutton{
-	color: #585858;
+	color: #262626;
 }
 #title{
 	text-align: center;
