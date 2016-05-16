@@ -62,7 +62,7 @@
 <div class="container">
 <?php
 echo "data before";
-   $sql = "select * from user where id='". $_SESSION['id'] . "';";
+   $sql = "select * from user where id='". $_SESSION['id'] . "'";
 
    $result = mysql_query($sql,$link);
 
