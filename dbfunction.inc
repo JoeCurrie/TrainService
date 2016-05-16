@@ -13,7 +13,7 @@
            $userdetails = mysqli_fetch_array($loginresult);
 	   // If the SQL query contains a record
 	   if ($userdetails['email']){
-              $_SESSION['id'] = $id;
+              $_SESSION['id'] = $loginresult['id'];
    	      return true;
            }
            else {
