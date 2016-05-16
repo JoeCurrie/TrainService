@@ -8,7 +8,7 @@
 	// will been assigned their student id.
 
     if (!$_SESSION) {
-        if (!$_POST) {
+        if ($_POST) {
             validatelogin($_POST['email'],$_POST['password']);
         } else {
             header('Location:  https://trainservice.herokuapp.com/login.php');
