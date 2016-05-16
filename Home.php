@@ -1,5 +1,5 @@
 <?php
-
+		echo "start";
         session_start(); 
 		require('dbConnection.php');
         include("dbfunctions.inc");
