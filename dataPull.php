@@ -61,7 +61,7 @@
 					$sqlInsert .= "'" . $train->source . "', ";
 					$sqlInsert .= "'" . $train->destination_name . "')";
 
-					echo $sqlInsert . "</br>";
+					echo "SQL: " . $sqlInsert . "</br>";
 
 					//mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 
