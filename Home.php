@@ -61,7 +61,7 @@
 <?php
 
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
-
+   echo $sql . "</br>";
    $result = mysqli_query($link, $sql);
    $row = mysqli_fetch_assoc($result);
    print_r ($row);
