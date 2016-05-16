@@ -12,7 +12,7 @@ else
   $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
   
   while ($row = mysqli_fetch_assoc($getTimes)) {
-     echo "yes";
+     echo $row['ID'];
   }
 }
 
