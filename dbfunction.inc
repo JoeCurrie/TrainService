@@ -10,7 +10,7 @@
            // matching id and password.
 	   $sql = "select * from user where email='$email' and password='$password'";
 	   $loginresult = mysqli_query($link, $sql);
-           $userdetails = mysqli_fetch_array($loginresult);
+           $userdetails = mysqli_fetch_assoc($loginresult);
 	   // If the SQL query contains a record
 	   if ($userdetails['email']){
               $_SESSION['id'] = $loginresult['id'];
