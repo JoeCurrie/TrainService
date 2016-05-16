@@ -34,8 +34,6 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a data-scroll href="#searchDiv">Search</a></li>
-                    <li><a data-scroll href="#aboutDiv">About</a></li>
-                    <li><a data-scroll href="#APIDiv">API</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a data-scroll href="index.php">Home</a></li>
@@ -44,6 +42,7 @@
             </div>
         </nav>
         
+        <div style="color:#000">
         <?php
         if(!(isset($_GET['tlc'])))
         {
@@ -92,6 +91,7 @@
               ?>
           </tbody>
       </table>
+      </div>
       
       <!-- jQuery first, then Bootstrap JS. -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
