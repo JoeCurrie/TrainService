@@ -43,9 +43,10 @@ $(function() {
 			dataType: 'json',
 			encode: true,
 			success: function(data) {
-				console.log(data);
+				//console.log(data);
 				if(!data.error) {
 					var sheet = document.styleSheets[1];
+					searchDiv = document.getElementById('searchDiv');
 					displayDiv = document.getElementById('resultDiv');
 					displayDiv.innerHTML = '';
 					for (i = 0; i < data.count; i++) {
@@ -56,8 +57,14 @@ $(function() {
 					}
 					if(data.count > 3) {
 						sheet.addRule("#resultDiv", "padding-top: 550px;");
+						//var height = searchDiv.offsetHeight;
+						var newHeight = window.innerHeight + 500;
+						console.log(newHeight);
+						searchDiv.style.height = newHeight + 'px';
 					} else {
 						sheet.addRule("#resultDiv", "padding-top: 0px;");
+						var windowheight = window.innerHeight;
+						document.getElementById("searchDiv").style.height = (windowheight - 50) + "px";
 					}
 				} else {
 					alert("Database error: " + data.error);

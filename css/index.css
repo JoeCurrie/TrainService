@@ -54,7 +54,8 @@ body {
 	background-color: #262626;
 	background-image: url('../img/bk_magnifyingglass.png');
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;
+	background-attachment: fixed;
 }
 
 #aboutDiv {
