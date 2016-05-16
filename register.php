@@ -1,4 +1,5 @@
 <?php
+  session_start(); 
   include('dbConnection.php');
   include("pagefunction.php");
     // If the values are posted, insert them into the database.
