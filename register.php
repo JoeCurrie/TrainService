@@ -1,5 +1,5 @@
 <?php
-  include('dbConnection.php');
+  include('dbconnection.inc');
   include("pagefunction.inc");
     // If the values are posted, insert them into the database.
     if (isset($_POST['email']) && isset($_POST['password'])){
