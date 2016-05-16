@@ -42,7 +42,7 @@
             </div>
         </nav>
         
-        <div style="color:#000">
+        <div style="color:#000;">
         <?php
         if(!(isset($_GET['tlc'])))
         {
