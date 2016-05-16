@@ -46,7 +46,7 @@
         while ($row = mysqli_fetch_assoc($getTimes)) {
            echo "<tr>";
            echo "<td><b>".$row['Destination_Name']."</b></td>";
-           echo "<td>".$row['Aimed_Dep_Date']."</td>";
+           echo "<td>".substr($row['Aimed_Dep_Date'], 0, 5)."</td>";
            
            if($row['Platform'] != "0")
            {
