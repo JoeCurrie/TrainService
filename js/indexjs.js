@@ -50,7 +50,7 @@ $(function() {
 					for (i = 0; i < data.count; i++) {
 						var newDiv = document.createElement('div');
 						newDiv.className = 'col-sm-6 searchResult';
-						newDiv.innerHTML = '<div class="panel panel-default"><div class="panel-body"><div class="panel-image hide-panel-body"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' + data.results[i].station + '&zoom=14&size=200x100&key=AIzaSyCV9MKvUbelTJkzcmzte3aM_rhZkGPns3U" class="panel-image-preview" /></div><div class="panel-footer text-center"><a href="display.php?tlc=' + data.results[i].tlc + '">' + data.results[i].station + '</a></div></div>';
+						newDiv.innerHTML = '<div class="panel panel-default"><div class="panel-body"><div class="panel-image hide-panel-body"><a href="display.php?tlc=' + data.results[i].tlc + '"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' + data.results[i].station + '&zoom=14&size=300x200&key=AIzaSyCV9MKvUbelTJkzcmzte3aM_rhZkGPns3U" class="panel-image-preview" /></a></div><div class="panel-footer text-center"><a href="display.php?tlc=' + data.results[i].tlc + '">' + data.results[i].station + '</a></div></div>';
 						displayDiv.appendChild(newDiv);
 					}
 				} else {
