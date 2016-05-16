@@ -1,6 +1,6 @@
 <?php
   include('dbConnection.php');
-  include("pagefunction.inc");
+  include("pagefunction.php");
     // If the values are posted, insert them into the database.
     if (isset($_POST['email']) && isset($_POST['password'])){
 
@@ -17,7 +17,7 @@
         $result = mysqli_query($link, $query) or die("Issue with details");
         if($result){
 			$extra = 'login.php';
-			//redirect($extra);
+			redirect($extra);
         }
 		else{
 			?>
