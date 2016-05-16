@@ -1,7 +1,4 @@
 <?php
-	// Start timer...
-	//$time_start = microtime(true);
-
 	include("httpful.phar");
 	include("dbConnection.php");
 
@@ -38,9 +35,6 @@
 		print("</pre>");
 
 		for($i = 0 ; $i < count($response->body->departures->all); $i++) {
-
-			
-
 			foreach($response->body->departures as $departure) {
 				foreach($departure as $train) {
 
@@ -62,23 +56,15 @@
 					$sqlInsert .= "'" . $train->destination_name . "')";
 
 					echo "SQL: " . $sqlInsert . "</br>";
-
-					//mysqli_query($link, $sqlInsert) or die("INSERT query failed");
-
+					mysqli_query($link, $sqlInsert) or die("INSERT query failed");
 				}
 			}
-			
 		}
 		
-
 		//print("<pre>");
 		//print_r($response->body);
 		//print("</pre>");
 		//echo("-------------");
 	}
-
-
 	mysqli_close($link);
-	//echo "Total execution time: " . (microtime(true) - $time_start) . "s";
-
 ?>
