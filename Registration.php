@@ -48,7 +48,7 @@
 
         <div class="container-fluid">
             <!-- Search Bar -->
-            <div id="Grad" class="row">
+            <div id="grad" class="row">
 <!-- Sign Up Panel -->
 <div id="signup" class="panel">
 <form action = "register.php" method = "POST" class="form-horizontal">
