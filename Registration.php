@@ -55,8 +55,8 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Sign Up</legend>
-
+						<div id="title"><h2>Sign Up<h2></div>
+						<hr class="style-two">
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Email">Email</label>  
@@ -112,8 +112,8 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Sign In</legend>
-
+						<div id="title"><h2>Sign In<h2></div>
+						<hr class="style-two">
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Email">Email</label>  
