@@ -21,8 +21,8 @@ $(function() {
 			success: function(data) {
 				//console.log(data);
 				if(data.error === false) {
-					alert("Station found!");
 					$("#searchBar").val(data.station);
+					displayStations();
 				} else {
 					alert("There is no station within reasonable range of your current position.");
 				}
@@ -31,6 +31,35 @@ $(function() {
 				alert("Position service failed.");
 			}
 		});
+	};
+
+	function displayStations() {
+		$.ajax({
+			url: 'displayStation.php',
+			type: 'post',
+			data: {
+				'string' : $('#searchBar').val()
+			},
+			dataType: 'json',
+			encode: true,
+			success: function(data) {
+				console.log(data);
+				if(!data.error) {
+					for (i = 0; i < data.count; i++) {
+						addStationResult(stationStr, tlcString);
+					}
+				} else {
+					alert("Database error: " + data.error);
+				}
+			},
+			error: function() {
+				alert("Search failed.");
+			}
+		});
+	};
+
+	function addStationResult(stationStr, tlcString) {
+		
 	};
 
 
@@ -56,27 +85,9 @@ $(function() {
 	});
 
 	$('#searchBar').on('input', function() {
-		$.ajax({
-			url: 'displayStation.php',
-			type: 'post',
-			data: {
-				'string' : $(this).val()
-			},
-			dataType: 'json',
-			encode: true,
-			success: function(data) {
-				//console.log(data);
-				if(data.error === false) {
-					alert("Station found!");
-					$("#searchBar").val(data.station);
-				} else {
-					alert("There is no station within reasonable range of your current position.");
-				}
-			},
-			error: function() {
-				alert("Position service failed.");
-			}
-		});
+		if ($(this).val().length >= 2) {
+			displayStations();
+		}
 	});
 
 	

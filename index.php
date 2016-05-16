@@ -66,6 +66,8 @@
                             </div>
                         </div>
                     </form>
+                    <div id="resultDiv">
+                    </div>
                 </div>
             </div>
             <!-- About -->
