@@ -45,8 +45,8 @@
                 </ul>
             </div>
         </nav>
-	<br/>
         <div  id="grad" class="container-fluid">
+			<br/>
             <!-- Search Bar -->
             <div class="row">
 <!-- Sign Up Panel -->
