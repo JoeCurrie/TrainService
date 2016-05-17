@@ -55,7 +55,8 @@
         
             $getStationName = mysqli_query($link, "SELECT * FROM Stations WHERE TLC='".$TLC."'");
             $row = mysqli_fetch_assoc($getStationName);
-            echo "<h1><b>TLC: ".$TLC." | Station: ".$row['Station']."</b></h1>";
+            $stationName = $row['Station'];
+            echo "<h1><b>TLC: ".$TLC." | Station: ".$stationName."</b></h1>";
         ?>
         
         <table class="table table-striped">
@@ -71,21 +72,24 @@
                 <?php
                 $getTimes = mysqli_query($link, "SELECT * FROM TrainTimes WHERE TLC='".$TLC."'");
                 while ($row = mysqli_fetch_assoc($getTimes)) {
-                   echo "<tr>";
-                   echo "<td><b>".$row['Destination_Name']."</b></td>";
-                   echo "<td>Today @ ".substr($row['Aimed_Dep_Date'], 0, 5)."</td>";
-                   
-                   if($row['Platform'] != "0")
-                   {
-                       echo "<td>".$row['Platform']."</td>";
-                   }
-                   else
-                   {
-                       echo "<td>1</td>";
-                   }
-                   
-                   echo "<td>".$row['Operator']."</td>";
-                   echo "</tr>";
+                    if($row['Destination_Name'] != $stationName)
+                    {
+                       echo "<tr>";
+                       echo "<td><b>".$row['Destination_Name']."</b></td>";
+                       echo "<td>Today @ ".substr($row['Aimed_Dep_Date'], 0, 5)."</td>";
+                       
+                       if($row['Platform'] != "0")
+                       {
+                           echo "<td>".$row['Platform']."</td>";
+                       }
+                       else
+                       {
+                           echo "<td>1</td>";
+                       }
+                       
+                       echo "<td>".$row['Operator']."</td>";
+                       echo "</tr>";
+                    }
                 }
               }
               ?>
