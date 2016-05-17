@@ -44,7 +44,18 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a data-scroll href="index.php">Home</a></li>
-                    <li><a href="Registration.php">Log In</a></li>
+					<?php
+	if (isset($_SESSION['id'])){
+?>
+	<li><a href="Home.php">Account</a></li>
+				<?php 
+			}
+			else{
+				?>  
+		<li><a href="Registration.php">Log In</a></li>
+				<?php
+					};
+				?>
                 </ul>
             </div>
         </nav>
