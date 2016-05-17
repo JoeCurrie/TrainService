@@ -9,12 +9,12 @@ $error = array();
 $data = array();
 
 // Check if the APIKey exists...
-if (isset($_GET['apiKey']) || ($_GET['apiKey'] == "")) {
+if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 	$result = mysqli_query($link, "SELECT `apiKey` FROM `user` WHERE `apiKey` = " . $_GET['apiKey']);
 	// Check the API key is valid
 	if(!mysqli_num_rows($result) == 0) {
 		// Check if the station var is set...
-		if (isset($_GET['tlc']) || ($_GET['tlc'] == "")) {
+		if (isset($_GET['tlc']) && ($_GET['tlc'] != "")) {
 			// Check if the station var is valid
 			$result = mysqli_query($link, "SELECT `station` FROM `Stations` WHERE `TLC` = " . strtoupper($_GET['tlc']));
 			if(!mysqli_num_rows($result) == 0) {
