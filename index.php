@@ -108,7 +108,18 @@
             <div id="APIDiv" class="row">
                 <div id="APIInfo" class="col-sm-8 col-sm-offset-2">
                     <p>Text here for first API</p>
-                    </hr>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            https://trainservice.herokuapp.com/api/stationFreq.php?tlc=
+                            <input type="text" class="form-control" id="APIstationvar" placeholder="WAT">
+                        </div>
+                        <div class="form-group">
+                            &amp;
+                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-default">Go</button>
+                    </form>
+                    <hr>
                     <p>Text here for second API</p>
                 </div>
             </div>
