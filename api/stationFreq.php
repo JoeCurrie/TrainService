@@ -47,6 +47,8 @@ if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 
 if (isset($error['description'])) {
 	$response[] = $error;
+} else {
+	$response[] = $data;
 }
 
 echo json_encode($response);
