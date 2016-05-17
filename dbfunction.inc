@@ -5,6 +5,8 @@ function validatelogin($email,$password){
 	include('dbConnection.php');
 	ini_set('display_errors', 'On');
 
+	echo "1";
+	
 	// Build an SQL statment that will return a record with a
 	// matching id and password.
 	$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
@@ -16,7 +18,7 @@ function validatelogin($email,$password){
 	//$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
 	$userdetails = mysqli_fetch_assoc($loginresult);
-	
+
 	if(mysqli_num_rows($loginresult) == 0) {
 		echo "Login Failed</br>";
 		echo "email: " . $userdetails['email'] . "</br>";
