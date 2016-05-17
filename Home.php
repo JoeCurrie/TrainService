@@ -9,7 +9,7 @@
 
     if (!$_SESSION) {
         if ($_POST) {
-            validatelogin($_POST['email'],$_POST['password']);
+            validatelogin($_POST['email'], $_POST['password']);
         } else {
             header('Location:  https://trainservice.herokuapp.com/login.php');
         }

@@ -15,12 +15,14 @@ function validatelogin($email,$password){
 	$loginresult = mysqli_query($link, $sql) or die("Query failed: " . mysqli_error($link));
 	//$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
+	$userdetails = mysqli_fetch_assoc($loginresult);
+	
 	if(mysqli_num_rows($loginresult) == 0) {
 		echo "Login Failed</br>";
 		echo "email: " . $loginresult['email'] . "</br>";
 	} else {
 		echo "Login Successful";
-		$userdetails = mysqli_fetch_assoc($loginresult);
+		
 		$_SESSION['id'] = $userdetails['id'];
 	}
 }
