@@ -16,7 +16,7 @@ if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 	echo $apiCheckSQL;
 	$apiCheckresult = mysqli_query($link, $apiCheckSQL) or die(mysqli_error($link));
 	// Check the API key is valid
-	if(mysqli_num_rows($apiCheckresult) != 0) {
+	if(mysqli_num_rows($apiCheckresult) == 1) {
 		echo "Key is valid</br>";
 		// Check if the station var is set...
 		if (isset($_GET['tlc']) && ($_GET['tlc'] != "")) {
