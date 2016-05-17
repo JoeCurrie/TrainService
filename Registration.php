@@ -82,7 +82,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="passwordinput">Password</label>
   <div class="col-md-4">
-    <input id="password" ng-model="" name="password" type="password" placeholder="Password" class="form-control input-md">
+    <input id="password" name="password" type="password" pattern=".{6,}" placeholder="Password" class="form-control input-md">
     
   </div>
 </div>

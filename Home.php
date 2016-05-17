@@ -33,12 +33,9 @@
 
     </head>
 	<?php
-
-    
-
 	if (isset($_SESSION['id'])){
 ?>
-<body id="grad">
+<body >
         <!-- Nav Bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -66,7 +63,7 @@
             </div>
         </nav>
 	<br/>
-<div class="container">
+<div id="grad" class="container">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <?php
