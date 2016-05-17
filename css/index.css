@@ -133,11 +133,11 @@ body {
 }
 
 #aboutText p, #APIInfo p {
-	padding-bottom: 30px;
+	padding-bottom: 30px !important;
 }
 
 hr {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	width: 70%;
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+	width: 70% !important;
 }
