@@ -62,9 +62,9 @@
                 </ul>
             </div>
         </nav>
-	<br/>
+		<div  id="grad" class="container-fluid">
 <div id="grad" class="container">
-
+	<br/>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <?php
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
