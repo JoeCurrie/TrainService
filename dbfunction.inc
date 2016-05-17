@@ -19,7 +19,7 @@ function validatelogin($email,$password){
 	
 	if(mysqli_num_rows($loginresult) == 0) {
 		echo "Login Failed</br>";
-		echo "email: " . $loginresult['email'] . "</br>";
+		echo "email: " . $userdetails['email'] . "</br>";
 	} else {
 		echo "Login Successful";
 		
