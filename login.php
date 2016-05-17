@@ -61,7 +61,7 @@
 						<div class="row">
 						<div class="col-lg-4 center-block"></div>
 						<div class="col-lg-4 center-block">
-						<button id="singlebutton" name="singlebutton" class="btn btn-inverse btn-block">Login</button>
+						<input id="singlebutton" type="submit" class="btn btn-inverse btn-block">Login</input>
 						</div>
 						<div class="col-lg-4 center-block"></div>
 						</form>
