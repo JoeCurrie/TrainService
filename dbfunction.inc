@@ -16,7 +16,8 @@ function validatelogin($email,$password){
 	//$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
 	if(mysqli_num_rows($loginresult) == 0) {
-		echo "Login Failed";
+		echo "Login Failed</br>";
+		echo "email: " . $loginresult['email'] . "</br>";
 	} else {
 		echo "Login Successful";
 		$userdetails = mysqli_fetch_assoc($loginresult);
