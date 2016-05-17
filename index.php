@@ -95,14 +95,10 @@
             </div>
             <!-- API -->
             <div id="APIDiv" class="row">
-                <div class="col-sm-4">
-                    One of three columns
-                </div>
-                <div class="col-sm-4">
-                    Two of three columns
-                </div>
-                <div class="col-sm-4">
-                    Three of three columns
+                <div id="APIInfo" class="col-sm-8 col-sm-offset-2">
+                    <p>Text here for first API</p>
+                    </hr>
+                    <p>Text here for second API</p>
                 </div>
             </div>
         </div>
