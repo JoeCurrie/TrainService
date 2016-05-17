@@ -64,7 +64,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Email">Email</label>  
   <div class="col-md-4">
-  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
+  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
     
   </div>
 </div>
@@ -82,7 +82,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="passwordinput">Password</label>
   <div class="col-md-4">
-    <input id="password" name="password" type="password" pattern=".{6,}" placeholder="Password" class="form-control input-md">
+    <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" pattern=".{6,}" title="Six or more characters">
     
   </div>
 </div>
