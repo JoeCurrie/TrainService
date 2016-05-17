@@ -64,7 +64,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Email">Email</label>  
   <div class="col-md-4">
-  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please match the following format example@example.co.uk">
     
   </div>
 </div>
