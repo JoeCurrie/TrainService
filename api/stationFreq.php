@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 ini_set('display_errors', 'On');
-include('dbConnection.php');
+include('../dbConnection.php');
 
 //echo $_GET['tlc'] . "</br>";
 //echo $_GET['apiKey'] . "</br>";
