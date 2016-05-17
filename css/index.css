@@ -131,3 +131,13 @@ body {
 #aboutText, #APIInfo {
 	padding-top: 50px;
 }
+
+#aboutText p, #APIInfo p {
+	padding-bottom: 30px;
+}
+
+hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 70%;
+}
