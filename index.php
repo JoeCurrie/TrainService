@@ -114,7 +114,7 @@
                             <input type="text" class="form-control" id="APIstationvar" placeholder="WAT">
                         </div>
                         <div class="form-group">
-                            &amp;
+                            &amp;apiKey=
                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                         </div>
                         <button type="submit" class="btn btn-default">Go</button>
