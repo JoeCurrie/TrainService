@@ -11,7 +11,6 @@ function validatelogin($email,$password){
 	//$sql = "SELECT * FROM `user` WHERE `email` = 'rahucks@gmail.com' AND `password` = '123'";
 	echo $sql . "</br>";
 
-	print_r($link);
 
 	$loginresult = mysqli_query($link, $sql) or die("Query failed: " . mysqli_error($link));
 	//$userdetails = mysqli_fetch_assoc($loginresult);
