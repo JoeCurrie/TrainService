@@ -32,15 +32,19 @@ if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 
 			} else {
 				$error['description'] = "The station specified in the requested URL does not exist. Read the documents at https://trainservice.herokuapp.com/#APIDiv";
+				mysqli_error();
 			}
 		} else {
 			$error['description'] = "The TLC code is not included in the requested URL. Read the documents at https://trainservice.herokuapp.com/#APIDiv";
+			mysqli_error();
 		}
 	} else {
 		$error['description'] = "The API key included in the requested URL is not valid. Read the documents at https://trainservice.herokuapp.com/#APIDiv";
+		mysqli_error();
 	}
 } else {
 	$error['description'] = "The API key is not included in the requested URL. Read the documents at https://trainservice.herokuapp.com/#APIDiv";
+	mysqli_error();
 }
 
 if (isset($error['description'])) {
