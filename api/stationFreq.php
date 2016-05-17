@@ -11,11 +11,11 @@ $data = array();
 // Check if the APIKey exists...
 if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 	echo "Key is included</br>";
-	$apiCheckSQL = "SELECT `apiKey` FROM `user` WHERE `apiKey` = '" . $_GET['apiKey'] . "'";
+	$apiCheckSQL = "SELECT * FROM `user` WHERE `apiKey` = '" . $_GET['apiKey'] . "'";
 	echo $apiCheckSQL;
-	$result = mysqli_query($link, $apiCheckSQL) or die(mysqli_error($link));
+	$apiCheckresult = mysqli_query($link, $apiCheckSQL) or die(mysqli_error($link));
 	// Check the API key is valid
-	if(mysqli_num_rows($result) != 0) {
+	if(mysqli_num_rows($apiCheckresult) != 0) {
 		echo "Key is valid</br>";
 		// Check if the station var is set...
 		if (isset($_GET['tlc']) && ($_GET['tlc'] != "")) {
