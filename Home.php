@@ -58,13 +58,14 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-scroll href="index.php">Home</a></li>
-                    <li class="active"><a href="logout.php">Sign Out</a></li>
+                    <li class="active"><a data-scroll href="#">Log In</a></li>
                 </ul>
             </div>
         </nav>
-		<div  id="grad" class="container-fluid">
-<div class="container">
-	<br/>
+        <div  id="grad" class="container-fluid">
+			<br/>
+            <!-- Search Bar -->
+            <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <?php
    $sql = "select * from user where id='". $_SESSION['id'] . "'";
