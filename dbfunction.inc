@@ -15,8 +15,10 @@ function validatelogin($email,$password){
 	// If the SQL query contains a record
 	if ($userdetails['email']){
 		//$_SESSION['id'] = $loginresult['id'];
+		echo "user exists.</br>";
 		$_SESSION['id'] = "21";
 	} else {
+		echo "user is a ghost.</br>";
 		$_SESSION['id'] ='';
 	}
 }
