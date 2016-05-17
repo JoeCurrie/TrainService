@@ -73,8 +73,21 @@
             </div>
             <!-- About -->
             <div id="aboutDiv" class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    Information goes here.
+                <div id="aboutText" class="col-sm-8 col-sm-offset-2">
+                    <div class="page-header">
+                        <h1>About <small>Whats it all about?</small></h1>
+                    </div>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor, ex vel mollis pharetra, mi orci auctor lectus, et luctus mi ipsum mollis felis. Pellentesque tristique semper rutrum. Sed bibendum feugiat sapien nec tempor. Ut vitae venenatis tortor. Cras augue magna, varius eu feugiat id, interdum ut lacus. Fusce eget arcu condimentum, viverra justo vel, dignissim diam. Pellentesque a lacus tellus. Nam eget enim cursus, iaculis augue vitae, maximus ipsum. Donec tristique nulla tortor, sit amet suscipit ipsum dapibus in. Nulla consequat nec arcu eget molestie.</p>
+
+                    <p>Proin eu ante in magna viverra iaculis non at libero. Cras porttitor quam ac turpis fringilla varius in et sem. Proin vestibulum mi purus, quis cursus nulla ornare eu. Donec pretium ante at rhoncus venenatis. Proin interdum facilisis lacus ac condimentum. Suspendisse turpis erat, condimentum in egestas ut, convallis ut ante. In tincidunt metus sed augue aliquet, id rutrum nibh efficitur. Vivamus id lorem aliquam, consequat sapien in, ultrices urna. Vivamus aliquam felis eget porta vestibulum.</p>
+
+                    <p>Nam blandit at sem eu interdum. Aliquam augue lectus, fermentum congue dui vitae, pulvinar tincidunt nulla. Etiam semper hendrerit libero, in venenatis metus condimentum id. Duis in erat venenatis, porta diam vitae, dignissim velit. Curabitur arcu felis, blandit quis elit eu, ultrices molestie metus. Cras ut interdum eros, sed sagittis elit. Nulla facilisi. Curabitur gravida est nec dictum tempor.</p>
+
+                    <p>Pellentesque et ullamcorper ipsum. Fusce tincidunt condimentum risus nec dignissim. Mauris vitae eros placerat, pharetra magna quis, porttitor nisi. Quisque tristique diam at mi mollis, sed gravida nibh consectetur. Etiam congue velit at vestibulum egestas. Fusce vitae enim justo. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis nunc non sapien porta ultrices sollicitudin quis nisl. Etiam porttitor viverra orci non vehicula. Fusce vestibulum velit sit amet odio tempor, volutpat suscipit ipsum porttitor. Integer et dui eu enim pharetra ullamcorper nec vel elit. Aenean tincidunt quam sagittis sapien fringilla, sed iaculis ex sagittis. Nunc eleifend nisi id lacus laoreet ultrices at a quam.</p>
+
+                    <p>Etiam accumsan nulla eget mi gravida pretium. Sed consequat mi ut sagittis mollis. Sed vel cursus dolor. Vivamus molestie leo urna, sit amet commodo orci placerat vitae. In vel sodales ante. In vehicula, est eget consectetur dignissim, tellus nibh tempor elit, vitae scelerisque nulla augue vitae eros. In malesuada tortor id mi dictum mollis. In vel dui mauris. Morbi suscipit sollicitudin metus. Pellentesque in pharetra est, at lacinia tellus. Aenean interdum ligula mi. Nam et metus massa. Nullam ut elementum mauris. Vestibulum tellus enim, suscipit vel dolor a, congue scelerisque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
                 </div>
             </div>
             <!-- API -->

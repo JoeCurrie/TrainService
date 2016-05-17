@@ -126,3 +126,7 @@ body {
 .panel-body {
 	padding: 0px;
 }
+
+#aboutText {
+	padding-top: 50px;
+}
