@@ -11,12 +11,15 @@ function validatelogin($email,$password){
 	$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
 	echo $sql . "</br>";
 	$loginresult = mysqli_query($link, $sql);
-	$userdetails = mysqli_fetch_assoc($loginresult);
+	//$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
-	if ($loginresult) {
-		echo "Success!";
+	if(mysqli_num_rows($loginresult) == 0) {
+		echo "Login Failed";
 	} else {
-		echo "Failed!";
+		echo "Login Successful";
+		$userdetails = mysqli_fetch_assoc($loginresult);
+		$_SESSION['id'] = $userdetails['id'];
 	}
+}
 
 ?>
