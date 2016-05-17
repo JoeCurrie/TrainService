@@ -13,7 +13,7 @@ function validatelogin($email,$password){
 	$loginresult = mysqli_query($link, $sql);
 	$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
-	if ($loginresult === true) {
+	if ($loginresult) {
 		echo "Success!";
 	} else {
 		echo "Failed!";
