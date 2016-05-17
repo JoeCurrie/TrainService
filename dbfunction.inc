@@ -13,7 +13,7 @@ function validatelogin($email,$password){
 	$loginresult = mysqli_query($link, $sql);
 	$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
-	if (isset($userdetails['email'])){
+	if ($userdetails){
 		//$_SESSION['id'] = $loginresult['id'];
 		echo "user exists.</br>";
 		$_SESSION['id'] = "21";
