@@ -111,7 +111,7 @@
                     <div class="page-header">
                         <h1>stationFreq</h1>
                     </div>
-                    <p>This API is used to get the ratio of daily traffic by each operator through a station specified in the API call.</p>
+                    <p>This API is used to get the ratio of daily traffic by each operator through a station specified in the API call. The request provides the information for the day previous.</p>
                     <form class="form-inline" method="GET" action="/api/stationFreq.php" target="_blank">
                         <div class="form-group">
                             https://trainservice.herokuapp.com/api/stationFreq.php?tlc=

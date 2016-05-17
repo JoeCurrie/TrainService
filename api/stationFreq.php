@@ -25,7 +25,7 @@ if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 			$result = mysqli_query($link, "SELECT `station` FROM `Stations` WHERE `TLC` = '" . strtoupper($_GET['tlc']) . "'") or die(mysqli_error());
 			if(mysqli_num_rows($result) != 0) {
 				//echo "TLC is valid</br>";
-				$apiResult = mysqli_query($link, "SELECT * FROM `StationLineHistory` WHERE `TLC` = '" . strtoupper($_GET['tlc']) . "'") or die(mysqli_error());
+				$apiResult = mysqli_query($link, "SELECT * FROM `StationLineHistory` WHERE `TLC` = '" . strtoupper($_GET['tlc']) . "' AND `Date` = CURDATE() - INTERVAL 1 DAY") or die(mysqli_error());
 				while ($row = mysqli_fetch_assoc($apiResult)){
 					$tmp = array();
 					$tmp['Operator'] = $row['Operator'];
