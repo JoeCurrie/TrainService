@@ -115,11 +115,11 @@
                     <form class="form-inline" method="GET" action="/api/stationFreq.php">
                         <div class="form-group">
                             https://trainservice.herokuapp.com/api/stationFreq.php?tlc=
-                            <input type="text" class="form-control" id="APIstationvar" placeholder="WAT">
+                            <input type="text" class="form-control" name="APIstationvar" placeholder="WAT">
                         </div>
                         <div class="form-group">
                             &amp;apiKey=
-                            <input type="text" class="form-control" id="APIstationvar" placeholder="aP1K3ygo35herE">
+                            <input type="text" class="form-control" name="APIkeyvar" placeholder="aP1K3ygo35herE">
                         </div>
                         <button type="submit" class="btn btn-default">Go</button>
                     </form>
