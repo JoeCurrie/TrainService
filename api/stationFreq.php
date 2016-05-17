@@ -13,7 +13,7 @@ if (isset($_GET['apiKey']) && ($_GET['apiKey'] != "")) {
 	echo "Key is included</br>";
 	$apiCheckSQL = "SELECT `apiKey` FROM `user` WHERE `apiKey` = '" . $_GET['apiKey'] . "'";
 	echo $apiCheckSQL;
-	$result = mysqli_query($link, $apiCheckSQL) or die(mysqli_error());
+	$result = mysqli_query($link, $apiCheckSQL) or die(mysqli_error($link));
 	// Check the API key is valid
 	if(!mysqli_num_rows($result) == 0) {
 		echo "Key is valid</br>";
