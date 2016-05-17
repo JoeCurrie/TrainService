@@ -9,8 +9,8 @@ function validatelogin($email,$password){
 	
 	// Build an SQL statment that will return a record with a
 	// matching id and password.
-	$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
-	//$sql = "SELECT * FROM `user` WHERE `email` = 'rahucks@gmail.com' AND `password` = '123'";
+	//$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
+	$sql = "SELECT * FROM `user` WHERE `email` = 'rahucks@gmail.com' AND `password` = '123'";
 	echo $sql . "</br>";
 
 
