@@ -58,7 +58,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-scroll href="index.php">Home</a></li>
-                    <li class="active"><a data-scroll href="#">Log In</a></li>
+                    <li class="active"><a data-scroll href="#">Account</a></li>
                 </ul>
             </div>
         </nav>
