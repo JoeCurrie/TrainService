@@ -119,7 +119,7 @@
                         </div>
                         <div class="form-group">
                             &amp;apiKey=
-                            <input type="email" class="form-control" id="APIstationvar" placeholder="aP1K3ygo35herE">
+                            <input type="text" class="form-control" id="APIstationvar" placeholder="aP1K3ygo35herE">
                         </div>
                         <button type="submit" class="btn btn-default">Go</button>
                     </form>
