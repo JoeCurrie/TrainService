@@ -1,6 +1,6 @@
 <?php 
 // Validate a student id and password 
-function validatelogin($email,$password){
+function validatelogin($usremail,$usrpassword){
 
 	include('dbConnection.php');
 	ini_set('display_errors', 'On');
@@ -9,8 +9,8 @@ function validatelogin($email,$password){
 	
 	// Build an SQL statment that will return a record with a
 	// matching id and password.
-	//$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
-	$sql = "SELECT * FROM `user` WHERE `email` = 'rahucks@gmail.com' AND `password` = '123'";
+	$sql = "SELECT * FROM `user` WHERE `email` = '" . $usremail . "' AND `password` = '" . $usrpassword . "'";
+	//$sql = "SELECT * FROM `user` WHERE `email` = 'rahucks@gmail.com' AND `password` = '123'";
 	echo $sql . "</br>";
 
 
@@ -21,7 +21,6 @@ function validatelogin($email,$password){
 
 	if(mysqli_num_rows($loginresult) == 0) {
 		echo "Login Failed</br>";
-		echo "email: " . $userdetails['email'] . "</br>";
 	} else {
 		echo "Login Successful";
 		
