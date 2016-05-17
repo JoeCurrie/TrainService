@@ -48,6 +48,7 @@
 	if (isset($_SESSION['id'])){
 ?>
 	<li><a href="Home.php">Account</a></li>
+	<li><a href="logout.php">Logout</a></li>
 				<?php 
 			}
 			else{

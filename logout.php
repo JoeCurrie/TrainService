@@ -39,9 +39,9 @@ session_destroy();
                     </a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a data-scroll href="#searchDiv">Search</a></li>
-                    <li><a data-scroll href="#aboutDiv">About</a></li>
-                    <li><a data-scroll href="#APIDiv">API</a></li>
+                    <li><a data-scroll href="index.php#searchDiv">Search</a></li>
+                    <li><a data-scroll href="index.php#aboutDiv">About</a></li>
+                    <li><a data-scroll href="index.php#APIDiv">API</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-scroll href="index.php">Home</a></li>
