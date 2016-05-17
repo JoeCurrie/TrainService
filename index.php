@@ -108,15 +108,18 @@
             <!-- API -->
             <div id="APIDiv" class="row">
                 <div id="APIInfo" class="col-sm-8 col-sm-offset-2">
-                    <p>Text here for first API</p>
-                    <form class="form-inline">
+                    <div class="page-header">
+                        <h1>stationFreq</h1>
+                    </div>
+                    <p>This API is used to get the ratio of daily traffic by each operator through a station specified in the API call.</p>
+                    <form class="form-inline" method="GET" action="/api/stationFreq">
                         <div class="form-group">
                             https://trainservice.herokuapp.com/api/stationFreq.php?tlc=
                             <input type="text" class="form-control" id="APIstationvar" placeholder="WAT">
                         </div>
                         <div class="form-group">
                             &amp;apiKey=
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                            <input type="email" class="form-control" id="APIstationvar" placeholder="aP1K3ygo35herE">
                         </div>
                         <button type="submit" class="btn btn-default">Go</button>
                     </form>
