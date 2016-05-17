@@ -3,7 +3,7 @@
 function validatelogin($usremail,$usrpassword){
 
 	include('dbConnection.php');
-	ini_set('display_errors', 'On');
+	//ini_set('display_errors', 'On');
 
 	echo "1";
 	
