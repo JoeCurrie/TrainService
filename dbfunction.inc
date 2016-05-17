@@ -10,7 +10,7 @@ function validatelogin($email,$password){
 	// matching id and password.
 	$sql = "SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'";
 	echo $sql . "</br>";
-	$loginresult = mysqli_query($link, $sql);
+	$loginresult = mysqli_query($link, $sql) or die("Query failed");
 	//$userdetails = mysqli_fetch_assoc($loginresult);
 	// If the SQL query contains a record
 	if(mysqli_num_rows($loginresult) == 0) {
