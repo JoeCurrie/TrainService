@@ -123,11 +123,6 @@
                         </div>
                         <button type="submit" class="btn btn-default">Go</button>
                     </form>
-                    <hr>
-                    <div class="page-header">
-                        <h1>locationUsage</h1>
-                    </div>
-                    <p>Text here for second API</p>
                 </div>
             </div>
         </div>
